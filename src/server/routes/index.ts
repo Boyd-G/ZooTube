@@ -1,9 +1,8 @@
 import * as express from 'express';
+import streamsRouter from "./streams";
 
 const router = express.Router();
 
-router.get('/api/hello', (req, res, next) => {
-    res.json('World');
-});
+router.use('/streams', streamsRouter);
 
 export default router;
