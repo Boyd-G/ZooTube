@@ -1,6 +1,6 @@
 import { Query } from './index'
 
-export const all  = async () => Query("SELECT * FROM CAMS")
+export const all  = async () => Query("select  Cams.id, Animals.animalName, organization.organization, organizationType.organizationType,  Cams.homeUrl, Cams.camUrl, Cams.supportUrl, Cams.embed From Cams join Animals on (Cams.animals=Animals.id)join Organization on (Cams.organization= Organization.id) join organizationType on (Cams.organizationType=organizationType.id)")
 
 export const singleStream  = async (id: number) =>  Query(`SELECT * FROM CAMS WHERE id = ? `, [id]) 
 
