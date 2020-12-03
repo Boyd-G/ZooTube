@@ -7,15 +7,15 @@ const router = express.Router();
 //     res.json('World');
 // });
 
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
     try {
     let streams = await DB.Streams.all()
     res.json(streams)
     } catch(e) {
         res.sendStatus(500)
     }
-})
-router.get('/:id', async (req, res) => {
+});
+router.get('/all/:id', async (req, res) => {
     try {
     const id: number = Number(req.params.id);    
     let stream = await DB.Streams.singleStream(id)
@@ -25,17 +25,28 @@ router.get('/:id', async (req, res) => {
     }
 });
 router.get('/organizations', async (req, res) => {
-    try {    
-    let organizations = await DB.Streams.allOrganizations()
-    res.json(organizations)
+    try {
+    let streams = await DB.Streams.allOrganizations()
+    res.json(streams)
     } catch(e) {
         res.sendStatus(500)
     }
-});
-router.get('/:organization', async (req, res) => {
+})
+
+// router.get('/organizations', async (req, res) => {
+        
+//     try {    
+//     // let organization = await DB.Streams.allOrganizations()
+//     res.json(await DB.Streams.all())
+//     } catch(error) {
+//         console.log(error)
+//         res.send(error).status(500)
+//     }
+// });
+router.get('/organizations/:id', async (req, res) => {
     try {
-    const organization = String(req.params.organization);
-    let singleOrg = await DB.Streams.singleOrganization(organization)
+    const id = Number(req.params.id);
+    let singleOrg = await DB.Streams.singleOrganization(id)
     res.json(singleOrg)
     } catch(e) {
         res.sendStatus(500)
@@ -49,10 +60,10 @@ router.get('/animals', async (req, res) => {
         res.sendStatus(500)
     }
 })
-router.get('/:animal', async (req, res) => {
+router.get('/animals/:id', async (req, res) => {
     try {
-    const animalType = String(req.params.animal);
-    let oneAnimal = await DB.Streams.singleAnimal(animalType)
+    const id = Number(req.params.id);
+    let oneAnimal = await DB.Streams.singleAnimal(id)
     res.json(oneAnimal)
     } catch(e) {
         res.sendStatus(500)
@@ -66,13 +77,13 @@ router.get('/organizationtypes', async (req, res) => {
         res.sendStatus(500)
     }
 })
-router.get('/:organizationtype', async (req, res) => {
+router.get('/organizationtypes/:id', async (req, res) => {
     try {
-        const organizationType = String(req.params.organizationtype)
-    let singleOrgType = await DB.Streams.singleOrganizationType(organizationType)
+        const id = Number(req.params.id)
+    let singleOrgType = await DB.Streams.singleOrganizationType(id)
     res.json(singleOrgType)
     } catch(e) {
-        res.sendStatus(500)
+        res.send(e).status(500)
     }
 })
 export default router;
