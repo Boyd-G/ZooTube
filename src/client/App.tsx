@@ -14,9 +14,9 @@ const App: React.FC<IAppProps> = () => {
 		<Router>
 			{/* <Navbar /> */}
 			<Switch>
-				<Route exact path="/" component={Organizations} />
-				{/* <Route exact path="/blog/:id/admin" component={SingleBlog} />
-				<Route exact path="/blog/add"  component={AddBlog} /> */}
+				{/* <Route exact path="/" component={Home} /> */}
+				<Route exact path="/organizations/:id" component={Organizations} />
+				{/* <Route exact path="/blog/add"  component={AddBlog} /> */}
 			</Switch>
 		</Router>
 	)

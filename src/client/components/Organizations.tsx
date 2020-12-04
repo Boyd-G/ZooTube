@@ -1,45 +1,62 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { RouteComponentProps } from "react-router-dom";
 import { organizations } from "../types";
 
 
-const Home: React.FC<IHomeProps> = () => {
-    const [organizations, setOrganizations] = React.useState<organizations[]>([]);
+const SingleOrganization: React.FC<ISingleOrganizationProps> = (props: ISingleOrganizationProps) => {
+    const [organizations, setOrganization] = React.useState<organizations>({
+
+        id: "",
+        organization: "",
+        description: "",
+        organizationFunFact: ""
+    });
 
     React.useEffect(() => {
-        fetchOrganizations();
+        (async () => {
+            try {
+                let res = await fetch(`/api/streams/organizations/${props.match.params.id}`);
+                let organization = await res.json();
+                setOrganization(organization);
+            } catch (err) {
+                console.log(err);
+            }
+        })();
     }, []);
 
-    const fetchOrganizations = async () => {
-        try {
-            let res = await fetch("/api/organizations/")
-            let organizations: organizations[] = await res.json();
-            //organizations.reverse();
-            setOrganizations(organizations);
-        } catch (err) {
-            console.log(err)
-        }
-    }
+    
 
+    
     return (
         <div className="container">
-            {organizations.map((organization: organizations) => (
-                <div key={organization.id} className="card shadow-lg m-2">
-                    <div className="card-body">
-                        <h4 className="card-title">{organization.title}</h4>
-                        <h5 className="card-title">{organization.name}</h5>
-                        <h6 className="card-title">{organization.email}</h6>
-                        <p className="card-text">{organization.content}</p>
-                        <Link to={`/organization/${organization.id}/admin`}>
-                            <button className="btn btn-sm btn-outline-dark float-right">Admin Options</button>
-                        </Link>
+            <div className="card shadow-lg m-2">
+                <div className="card-body">
+                    <div className="row">
+                        <h3 className="card-title">{organizations.id}</h3>
+                        <h4 className="card-title">{organizations.organization}</h4>
+                        <h5 className="card-title">{organizations.description}</h5>
+                        <h5 className="card-title">{organizations.organizationFunFact}</h5>
                     </div>
+                    {/* <div className="row">
+                        <input type="text" className="card-title" placeholder="Title" defaultValue={blog.title} onChange={onTitleChange} />
+                    </div>
+                    <div className="row">
+                        <input type="text" className="card-title" placeholder="Name" defaultValue={blog.name} onChange={onAuthorNameChange} />
+                    </div>
+                    <div className="row">
+                        <input type="text" className="card-title" placeholder="Email" defaultValue={blog.email} onChange={onEmailChange} />
+                    </div> */}
+                    {/* <div className="row">
+                        <textarea className="card-text" placeholder="Blog" defaultValue={blog.content} cols={50} rows={15} onChange={(e) => onContentChange(e)}></textarea>
+                    </div>
+                    <button className="btn btn-sm btn-outline-dark float-right mx-1" onClick={() => editBlog(blog.id)}>Save</button>
+                    <button className="btn btn-sm btn-outline-dark float-right mx-1" onClick={() => deleteBlog(blog.id)}>Delete</button> */}
                 </div>
-            ))}
+            </div>
         </div>
     )
 }
 
-interface IHomeProps { }
+interface ISingleOrganizationProps extends RouteComponentProps<{ id: string }> { }
 
-export default Home
+export default SingleOrganization;

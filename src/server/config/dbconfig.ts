@@ -3,8 +3,8 @@ export default {
     mysql:{
         host: "localhost",
         port: 3306,
-        user: "animalCams",
-        database: "animalCam",
+        user: "zooTubeDB",
+        database: "zooTubeDB",
         password: "password"
     }
 }
