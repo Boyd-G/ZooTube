@@ -43,15 +43,18 @@ router.get('/organizations', async (req, res) => {
 //         res.send(error).status(500)
 //     }
 // });
+
 router.get('/organizations/:id', async (req, res) => {
     try {
-    const id = Number(req.params.id);
-    let singleOrg = await DB.Streams.singleOrganization(id)
-    res.json(singleOrg)
+    const id: number = Number(req.params.id);
+    const [data] = await DB.Streams.singleOrganization(id);
+    res.json(data)
     } catch(e) {
-        res.sendStatus(500)
+        console.log(e)
+        res.sendStatus(500).send(e);
     }
 })
+
 router.get('/animals', async (req, res) => {
     try {
     let animals = await DB.Streams.allAnimals()
