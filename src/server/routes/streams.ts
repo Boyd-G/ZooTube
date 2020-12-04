@@ -44,7 +44,7 @@ router.get('/organizations', async (req, res) => {
 //     }
 // });
 
-router.get('/streams/organizations/:id', async (req, res) => {
+router.get('/organizations/:id', async (req, res) => {
     try {
     const id: number = Number(req.params.id);
     const [data] = await DB.Streams.singleOrganization(id);
