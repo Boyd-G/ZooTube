@@ -1,22 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Switch, Route } from 'react-router-dom';
-//import Home from './components/Home';
-// import SingleBlog from './components/SingleBlog';
-// import AddBlog from './components/AddBlog';
-//import Navbar from './components/Navbar';
-import Organizations from './components/Organizations'
+import * as React from 'react';
+import Home from './Components/Home';
+import Navbar from './Components/Navbar';
+import Animals from './Components/Animals';
+import Organizations from './Components/organizations';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'; 
 
 
 
 const App: React.FC<IAppProps> = () => {
 	return (
 		<Router>
-			{/* <Navbar /> */}
-			<Switch>
-				{/* <Route exact path="/" component={Home} /> */}
-				<Route exact path="/organizations/:id" component={Organizations} />
-				{/* <Route exact path="/blog/add"  component={AddBlog} /> */}
+			<Navbar />
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/animals" component={Animals} />
+                <Route exact path="/organizations"  component={Organizations} />
 			</Switch>
 		</Router>
 	)
