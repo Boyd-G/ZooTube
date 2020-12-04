@@ -1,4 +1,4 @@
-export interface Cams {
+export default interface Cams {
 id: string;
 organization: string;
 organizationtype: string;
