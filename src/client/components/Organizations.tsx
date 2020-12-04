@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteComponentProps } from "react-router-dom";
-import { organizations } from "../types";
+import { organizations } from "../OrgTypes";
 
 
 const SingleOrganization: React.FC<ISingleOrganizationProps> = (props: ISingleOrganizationProps) => {

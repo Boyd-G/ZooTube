@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cams } from '../types';
+import  Cams  from '../Camtypes';
 
 function Home() {
     const [Cams, setCams] = React.useState<Cams>();
