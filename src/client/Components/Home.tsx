@@ -34,11 +34,11 @@ function Home() {
 
             <div className="card bg-light second">
                 <div className="card-body">
-                    <a className="navbar-brand">
-                        <div className="mission-image">
-                            <img src="https://imgur.com/BP5xKjZ.png" className="img-fluid" />
-                        </div>
-                    </a>
+                <a className="navbar-brand">
+                    <div className="mission-image">
+                        <img src="https://imgur.com/BP5xKjZ.png" className="img-fluid" />
+                    </div>
+                </a>
                     {/* <h5 className="card-title">Our Mission Statement</h5> */}
                     <p className="card-text">Zoos and rescues around the country and around the world provide an important service by conducting research, rescuing and rehabilitating animals, overseeing animal population management,
                     and providing education and entertainment to millions of people each year.  During the current global pandemic, zoos have seen a sharp decline in attendance.
@@ -48,8 +48,8 @@ function Home() {
             </div>
             <div className="card bg-light third">
                 <div className="card-body">
-                    <p>FUN FACT: This panda goes to sleep during presentation</p>
-                    {/* <h5 className="card-title">Could put text here</h5> */}
+                    <p>FUN FACT: This panda goes to sleep during presentation</p> 
+                     {/* <h5 className="card-title">Could put text here</h5> */}
                     {/* <a className="navbar-brand">
                     <div className="sm-logo">
                         <img src="https://imgur.com/dlXCiM7.png" className="img-fluid" />

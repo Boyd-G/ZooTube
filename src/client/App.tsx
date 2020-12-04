@@ -8,16 +8,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 const App: React.FC<IAppProps> = () => {
-    return (
-        <Router>
-            <Navbar />
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/animals" component={Animals} />
-                <Route exact path="/organizations"  component={Organizations} />
-            </Switch>
-        </Router>
-    )
+	return (
+		<Router>
+			<Navbar />
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/animals" component={Animals} />
+				<Route exact path="/organizations"  component={Organizations} />
+			</Switch>
+		</Router>
+	)
 };
 
 interface IAppProps { }
