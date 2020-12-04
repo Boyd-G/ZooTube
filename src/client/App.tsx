@@ -22,4 +22,4 @@ const App: React.FC<IAppProps> = () => {
 
 interface IAppProps { }
 
-export default App
+export default App 

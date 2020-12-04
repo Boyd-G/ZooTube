@@ -31,6 +31,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+
             <div className="card bg-light second">
                 <div className="card-body">
                 <a className="navbar-brand">
@@ -47,8 +48,8 @@ function Home() {
             </div>
             <div className="card bg-light third">
                 <div className="card-body">
-                    <p>FUN FACT: This panda goes to sleep during presentation</p>
-                    {/* <h5 className="card-title">Could put text here</h5> */}
+                    <p>FUN FACT: This panda goes to sleep during presentation</p> 
+                     {/* <h5 className="card-title">Could put text here</h5> */}
                     {/* <a className="navbar-brand">
                     <div className="sm-logo">
                         <img src="https://imgur.com/dlXCiM7.png" className="img-fluid" />
