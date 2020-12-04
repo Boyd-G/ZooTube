@@ -3,3 +3,35 @@ $theme-colors: (
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.logo-image{
+    width: 150px;
+    height: 45px;
+    margin-top: -13px;
+}
+
+.ft{
+    color: white;
+    margin-top: 10px;
+    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-color: black;
+    text-shadow: 1px 3px black
+}
+
+.first{
+    margin-right: 15px;
+    float: left;
+}
+.second {
+    overflow: hidden;
+    opacity: .90;
+}
+
+.text{
+    color: red
+}
+
+body {
+    background-image: url(https://imgur.com/1B67FPt.png)
+}
+

@@ -17,7 +17,6 @@ export const allAnimals =  async () => Query("SELECT * FROM ANIMALS")
 export const singleAnimal = async (id: number) => Query(`SELECT * FROM ANIMALS WHERE id =?`, [id])
 
 
-    
 
 export default {
     all,
