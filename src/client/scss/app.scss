@@ -10,6 +10,23 @@ $theme-colors: (
     margin-top: -13px;
 }
 
+
+.mission-image{
+    width: 200px;
+    height: 40px;
+    margin-top: -17px;
+    margin-left: 45px;
+    margin-bottom: 5px;
+}
+
+.sm-logo{
+    width: 20px;
+    height: 20px;
+    // margin-top: -17px;
+    // margin-left: 45px;
+    // margin-bottom: 5px;
+}
+
 .ft{
     color: white;
     margin-top: 10px;
@@ -24,11 +41,17 @@ $theme-colors: (
 }
 .second {
     overflow: hidden;
-    opacity: .90;
+    opacity: .98;
 }
 
-.text{
-    color: red
+.third {
+    margin-top: 10px;
+    height: 60px;
+}
+
+.header{
+color: white;
+background-color: rgb(107, 195, 76);
 }
 
 body {
