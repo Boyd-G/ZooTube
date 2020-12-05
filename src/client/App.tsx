@@ -14,7 +14,7 @@ const App: React.FC<IAppProps> = () => {
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route exact path="/animals" component={Animals} />
-				<Route exact path="/organizations"  component={Organizations} />
+				<Route exact path="/streams/organizations/:id"  component={Organizations} />
 			</Switch>
 		</Router>
 	)
