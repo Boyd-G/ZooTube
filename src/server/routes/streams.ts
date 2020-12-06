@@ -3,6 +3,16 @@ import DB from "../db"
 import { OkPacket } from "mysql"
 const router = express.Router();
 
+
+//----REQUEST HANDLER FOR ADMIN ROLE-----//
+// const isAdmin: express.RequestHandler = (req, res, next) => {
+//     if (!req.user || req.user.role !== 'admin') {
+//         return res.sendStatus(401);
+//     } else {
+//         return next();
+//     }
+// };
+
 // router.get('/home', (req, res, next) => {
 //     res.json('World');
 // });
