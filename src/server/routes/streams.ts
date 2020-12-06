@@ -26,10 +26,10 @@ router.get('/all/:id', async (req, res) => {
 });
 router.get('/organizations', async (req, res) => {
     try {
-    let streams = await DB.Streams.allOrganizations()
+    const streams = await DB.Streams.allOrganizations();
     res.json(streams)
     } catch(e) {
-        res.sendStatus(500)
+        res.sendStatus(500).send(e)
     }
 })
 
@@ -46,14 +46,13 @@ router.get('/organizations', async (req, res) => {
 
 router.get('/organizations/:id', async (req, res) => {
     try {
-    const id: number = Number(req.params.id);
-    const [data] = await DB.Streams.singleOrganization(id);
-    res.json(data)
-    } catch(e) {
-        console.log(e)
-        res.sendStatus(500).send(e);
-    }
-})
+        const id = Number(req.params.id)
+        let singleOrgType = await DB.Streams.singleOrganization(id)
+        res.json(singleOrgType)
+        } catch(e) {
+            res.send(e).status(500)
+        }
+    })
 
 router.get('/animals', async (req, res) => {
     try {

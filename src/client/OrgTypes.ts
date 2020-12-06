@@ -1,6 +1,12 @@
-export interface organizations {
+export interface organization {
     id?: string,
+    animalName: string,
     organization: string,
+    organizationType: string,
+    animalFunfact: string,
     description: string,
-    organizationFunFact: string
+    organizationFunfact: string, 
+    camUrl: any,
+    homeUrl: any,
+    supportUrl: any
 }

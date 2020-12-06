@@ -31,6 +31,8 @@ export const allOrganizations = async () => Query("select organization.* from or
 
 export const singleOrganization = async (id: number) => Query(`select  Cams.id, 
     Animals.animalName, 
+    Animals.animalFunfact,
+    Animals.description,
     organization.id, 
     organization.organization, 
     organizationType.organizationType,  

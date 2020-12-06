@@ -26,7 +26,7 @@ const Navbar: React.FC<INavbarProps> = () => {
                         <Link className="nav-link header" to="/animals">Animals</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link header" to="/organizations">Organizations</Link>
+                        <Link className="nav-link header" to="/streams/organizations">Organizations</Link>
                     </li>
                 </ul>
                 <ul className="navbar-nav">
