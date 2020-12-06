@@ -5,7 +5,7 @@ import authConfig from '../config'
 
 //auth table query imports
 import Users from './queries/users';
-import Tokens from './queries/tokens';
+import AccessTokens from './queries/accesstokens';
 
 
 export const Connection = mysql.createConnection(config.mysql)
@@ -28,5 +28,5 @@ export default {
     Streams, 
     // auth exports
     Users,
-    Tokens
+    AccessTokens
 }
