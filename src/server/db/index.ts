@@ -1,11 +1,12 @@
 import config from "../config/dbconfig"
 import * as mysql from "mysql"
 import Streams from "./streams"
-import config from '../config'
+import authConfig from '../config'
 
 //auth table query imports
-import Users from './queries/users'
-import Tokens from './queries/tokens'
+import Users from './queries/users';
+import Tokens from './queries/tokens';
+
 
 export const Connection = mysql.createConnection(config.mysql)
 
@@ -25,4 +26,7 @@ export const Query = (query: string, values?: Array<string | number>) => {
 
 export default {
     Streams, 
+    // auth exports
+    Users,
+    Tokens
 }

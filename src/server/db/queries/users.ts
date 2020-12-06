@@ -6,6 +6,6 @@ const findOnebyId = async (id: number) => Query(`SELECT * FROM users WHERE id ='
 
 
 export default {
-    findOneByEmail
+    findOneByEmail,
     findOnebyId
 }
