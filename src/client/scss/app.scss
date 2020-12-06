@@ -10,7 +10,6 @@ $theme-colors: (
     margin-top: -13px;
 }
 
-
 .mission-image{
     width: 200px;
     height: 40px;
@@ -20,11 +19,10 @@ $theme-colors: (
 }
 
 .sm-logo{
-    width: 20px;
-    height: 20px;
-    // margin-top: -17px;
-    // margin-left: 45px;
-    // margin-bottom: 5px;
+    height: 40px;
+    float: left;
+    margin-top: -14px;
+    margin-left: 0px;
 }
 
 .ft{
@@ -35,18 +33,31 @@ $theme-colors: (
     text-shadow: 1px 3px black
 }
 
-.first{
+.main-container{
     margin-right: 15px;
     float: left;
 }
-.second {
-    overflow: hidden;
-    opacity: .98;
+
+.text{
+    width: 170px;
 }
 
-.third {
+.second-container {
+    overflow: hidden;
+    // opacity: .98;
+}
+
+.third-container {
     margin-top: 10px;
-    height: 65px;
+    height: 60px;
+}
+
+.animal-photos{
+    height:300px;
+    width:300px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .header{
@@ -54,7 +65,171 @@ color: white;
 background-color: rgb(107, 195, 76);
 }
 
+.animal-container{
+    flex-wrap: wrap;
+}
+
+.map{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.tiger{
+    position: absolute;
+    top: 420;
+    left: 600;
+    height: 100px;
+    width: 100px;
+}
+.panda{
+    position: absolute;
+    top: 600;
+    left: 760;
+    height: 100px;
+    width: 100px;
+}
+.dog{
+    position: absolute;
+    top: 420;
+    left: 840;
+    height: 80px;
+    width: 80px;
+}
+.penguin{
+    position: absolute;
+    top: 80;
+    left: 690;
+    height: 70px;
+    width: 40px;
+}
+.otter{
+    position: absolute;
+    top: 270;
+    left: 690;
+    height: 70px;
+    width: 40px;
+}
+.sloth{
+    position: absolute;
+    top: 280;
+    left: 820;
+    height: 65px;
+    width: 90px;
+}
+
+.grafe{
+    position: absolute;
+    top: 520;
+    left: 470;
+    height: 175px;
+    width: 100px;
+}
+.shark{
+    position: absolute;
+    top: 215;
+    left: 385;
+    height: 70px;
+    width: 120px;
+}
+.fish{
+    position: absolute;
+    top: 180;
+    left: 800;
+    height: 50px;
+    width: 70px;
+}
+.elephant{
+    position: absolute;
+    top: 360;
+    left: 450;
+    height: 90px;
+    width: 95px;
+}
+.tiger:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+}
+.sloth:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(234, 78, 255, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(234, 78, 255, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(234, 78, 255, 0.67);
+}
+.elephant:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(90, 90, 90, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(90, 90, 90, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(90, 90, 90, 0.67);
+}
+.panda:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+}
+.dog:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(122, 85, 36, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(122, 85, 36, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(122, 85, 36, 0.67);
+}
+.grafe:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 136, 0, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(255, 136, 0, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(255, 136, 0, 0.67);
+}
+.penguin:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(98, 198, 255, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(98, 198, 255, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(98, 198, 255, 0.67);
+}
+.shark:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 47, 255, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(0, 47, 255, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(0, 47, 255, 0.67);
+}
+.otter:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(93, 255, 174, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(93, 255, 174, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(93, 255, 174, 0.67);
+}
+.fish:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 252, 93, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(255, 252, 93, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(255, 252, 93, 0.67);
+}
+
 body {
-    background-image: url(https://imgur.com/1B67FPt.png)
+    background-image: url(https://imgur.com/1B67FPt.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
