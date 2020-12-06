@@ -31,7 +31,9 @@ function Home() {
                     </div>
                 </div>
             </div>
+<
             <div className="card bg-secondary second-container">
+
                 <div className="card-body">
                     <a className="navbar-brand">
                         <div className="mission-image">
@@ -45,6 +47,7 @@ function Home() {
                     Our goal is to provide a way for people to engage, and donate, to these animals and organizations that we all love, from the safety of their own homes.</p>
                 </div>
             </div>
+
             <div className="card bg-secondary third-container">
                 <div className="card-body row mx-1">
                     <p className="text-light">Connect with us!</p>
@@ -57,6 +60,7 @@ function Home() {
                     <a className="navbar-brand" href="https://www.instagram.com/" target="_blank">
                         <img src="https://imgur.com/fjPwu61.png" className="img-fluid sm-logo" />
                     </a>
+
                 </div>
             </div>
         </div>
