@@ -1,7 +1,11 @@
 import config from "../config/dbconfig"
 import * as mysql from "mysql"
 import Streams from "./streams"
+import config from '../config'
 
+//auth table query imports
+import Users from './queries/users'
+import Tokens from './queries/tokens'
 
 export const Connection = mysql.createConnection(config.mysql)
 
