@@ -114,7 +114,8 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
                     <div className="card-body">
                     {/* <h4 className="card-title">{organization.organization}</h4> */}
                     <h5 className="card-title">{organization.animalName}</h5>
-                    <iframe width="696" height="346" src={organization.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <img src={organization.animalImageUrl} alt={organization.animalName}/>
+                    {/* <iframe width="696" height="346" src={organization.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
                     <h5 className="card-title">{organization.animalFunfact}</h5>
                         <Link to={`/streams/organizations/${organization.id}`}>
                             <button className="btn btn-sm btn-outline-dark float-right">Live Stream</button>
