@@ -31,7 +31,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-<
+
             <div className="card bg-secondary second-container">
 
                 <div className="card-body">

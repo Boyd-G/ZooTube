@@ -27,7 +27,9 @@ const Organizations: React.FC<IOrganizationProps> = () => {
                 <div key={organization.id} className="card shadow-lg m-2">
                     <div className="card-body">
                     <h4 className="card-title">{organization.organization}</h4>
+                    <img src={organization.orgImageUrl} alt={organization.animalName}/>
                     <h5 className="card-title">{organization.description}</h5>
+
                     {/* <h5 className="card-title">{organization.organizationFunfact}</h5> */}
                         <Link to={`/streams/organizations/${organization.id}`}>
                             <button className="btn btn-sm btn-outline-dark float-right">Live Stream</button>
