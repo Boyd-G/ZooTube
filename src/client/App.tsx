@@ -14,7 +14,8 @@ const App: React.FC<IAppProps> = () => {
 			<Navbar />
 			<Switch>
 				<Route exact path="/" component={Home} />
-				<Route exact path="/animals" component={Animals} />
+				<Route exact path="/streams/animals" component={Animals} />
+				{/* <Route exact path="/streams/animals/:id" component={SingleAnimals} />  singleAnimals component not done yet*/}
 				<Route exact path="/streams/organizations/:id"  component={SingleOrganization} />
 				<Route exact path="/streams/organizations"  component={Organizations} />
 			</Switch>
