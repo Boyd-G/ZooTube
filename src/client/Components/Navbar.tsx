@@ -23,7 +23,7 @@ const Navbar: React.FC<INavbarProps> = () => {
                         <Link className="nav-link header" to="/">Home <span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link header" to="/animals">Animals</Link>
+                        <Link className="nav-link header" to="/streams/animals">Animals</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link header" to="/streams/organizations">Organizations</Link>

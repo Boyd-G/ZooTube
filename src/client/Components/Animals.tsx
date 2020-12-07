@@ -34,7 +34,7 @@ const fetchAnimals = async () => {
             <img
             
               src={animals.animalMapImage}
-              alt="bottle"
+              alt={animals.animalName}
               className={animals.animalClassName}
               />
          
