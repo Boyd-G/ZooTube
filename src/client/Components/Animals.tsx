@@ -1,27 +1,51 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import '../scss/app.scss';
+import React from "react";
+import { Link, RouteComponentProps } from "react-router-dom";
+import "../scss/app.scss";
+import { animals } from "../AnimalTypes";
 // import penguin from '../assets/animals/1_animal_penguin.jpg';
 
+const Animals: React.FC<IAnimalsProps> = () => {
+const [animals, setAnimals] = React.useState<animals[]>([]);
 
+React.useEffect(() => {
+  fetchAnimals();
+}, []);
 
-const Animals: React.FC<AnimalProps> = (props: AnimalProps) => {
-    const [animal, setAnimals] = React.useState();
+const fetchAnimals = async () => {
+  try {
+    let res = await fetch("/api/streams/animals/");
+    let animals: animals[] = await res.json();
+    // organizations.reverse();
+    setAnimals(animals);
+  } catch (err) {
+    console.log(err);
+  }
+};
+  return (
 
-    // React.useEffect(() => {
-    //     (async () => {
-    //         let data = await fetch("/api/blogs")
-    //         let animals = await data.json();
-    //         animals.reverse();
-    //         setAnimals(animals);
-    //     })();
-    // }, [])
-
-    return (
-        <React.Fragment>
-
-            <div className="animal-container">
-                <img src="https://i.imgur.com/joRpSs0.png" className="map" />
+    <React.Fragment>
+    <div className="animal-container">
+   <img src="https://i.imgur.com/joRpSs0.png" className="map" />  
+      {animals.map((animals: animals) => (
+        <div key={animals.id} >
+          <Link to={`/streams/animals/${animals.id}`}>
+          
+            
+            <img
+            
+              src={animals.animalMapImage}
+              alt="bottle"
+              className={animals.animalClassName}
+              />
+         
+              </Link>
+        </div>
+        
+      ))}
+      </div>
+    </React.Fragment>
+    // {
+    /* <img src="https://i.imgur.com/joRpSs0.png" className="map" />
                 <a href="https://www.google.com/" id="bottle" target="_blank">
                     <img src="https://imgur.com/YtRHikg.png" alt="bottle" className="tiger" />
                 </a>
@@ -51,10 +75,9 @@ const Animals: React.FC<AnimalProps> = (props: AnimalProps) => {
                 </a>
                 <a href="https://www.google.com/" id="bottle" target="_blank">
                     <img src="https://i.imgur.com/DN6NNSz.png" alt="bottle" className="sloth" />
-                </a>
+                </a> */
 
-
-                {/* <div className="card bg-secondary second-container animal-photos">
+    /* <div className="card bg-secondary second-container animal-photos">
                     <div className="card-body">
                         <img src="./assets/animals/1_animal_penguin.jpg" className="card-img-top" alt="Picture of a penguin" />
                         <div className="card-body">
@@ -79,12 +102,10 @@ const Animals: React.FC<AnimalProps> = (props: AnimalProps) => {
                             <p className="card-text"><small className="text-danger">LIVE</small></p>
                         </div>
                     </div>
-                </div> */}
-            </div>
-        </React.Fragment>
-    )
-}
+                </div> */
+  );
+};
 
-interface AnimalProps { }
+interface IAnimalsProps{} 
 
 export default Animals;
