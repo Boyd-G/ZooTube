@@ -1,8 +1,9 @@
+import config from "../config/dbconfig"
 import * as mysql from "mysql"
 import Streams from "./streams"
 
 
-export const Connection = mysql.createConnection('../config.mysql')
+export const Connection = mysql.createConnection(config.mysql)
 
 Connection.connect(err =>{
     if(err) console.log(err);
