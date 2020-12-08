@@ -3,7 +3,7 @@ import { Link, RouteComponentProps } from "react-router-dom";
 import { animals } from "../AnimalTypes";
 
 
-
+ 
 const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
     const [animal, setSingleAnimal] = React.useState<animals[]>([]);
 
