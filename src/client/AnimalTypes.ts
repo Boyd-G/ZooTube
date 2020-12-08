@@ -7,7 +7,7 @@ export interface animals {
     organization: string,
     organizationType: string,
     orgImageUrl: string,
-    animalFunfact: string,
+    animalFunFact: string,
     description: string,
     organizationFunfact: string, 
     camUrl: any,

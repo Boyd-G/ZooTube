@@ -229,7 +229,8 @@ box-shadow:         0px 0px 30px 0px rgba(255, 252, 93, 0.67);
 
 body {
     background-image: url(https://imgur.com/1B67FPt.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size:auto;
 }
 
