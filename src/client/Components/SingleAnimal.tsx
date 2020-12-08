@@ -28,15 +28,15 @@ const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
   if(animal.embed === "yes"){ 
     return (
     <>
-      <div className="container w-75">
-        <div className="card shadow-lg m-2 ">
-          <div className="card-body justify-content-center ">
+      <div className="container">
+        <div className="card shadow-lg m-2">
+          <div className="card-body justify-content-center w-25ç">
             <h1 className="card-title m-3">{animal.animalName}</h1>
             <h5 className="card-title m-3">{animal.description}</h5>
             <div className="d-flex justify-content-center align-items-center">
               <iframe
-                width="696"
-                height="346"
+                // width="696"
+                // height="346"
                 src={animal.camUrl}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               ></iframe>
@@ -61,12 +61,12 @@ const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
 } else {
   return (
     <>
-    <div className="container w-75">
-      <div className="card shadow-lg m-2 ">
-        <div className="card-body justify-content-center ">
+    <div className="container w-50">
+      <div className="card shadow-lg m-2">
+        <div className="card-body justify-content-center">
           <h1 className="card-title m-3">{animal.animalName}</h1>
           <h5 className="card-title m-3">{animal.description}</h5>
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-center align-items-center w-100">
           <img
                 src={animal.animalImageUrl}
                 alt={animal.animalName}
