@@ -32,7 +32,7 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
                     <img src={organization.animalImageUrl} alt={organization.animalName}/>
                     {/* <iframe width="696" height="346" src={organization.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
                     <h5 className="card-title">{organization.animalFunfact}</h5>
-                        <Link to={`/streams/organizations/${organization.id}`}>
+                        <Link to={`/streams/animals/${organization.id}`}>
                             <button className="btn btn-sm btn-outline-dark float-right">Live Stream</button>
                         </Link>
                     </div>

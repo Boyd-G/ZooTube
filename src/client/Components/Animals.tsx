@@ -5,45 +5,37 @@ import { animals } from "../AnimalTypes";
 // import penguin from '../assets/animals/1_animal_penguin.jpg';
 
 const Animals: React.FC<IAnimalsProps> = () => {
-const [animals, setAnimals] = React.useState<animals[]>([]);
+  const [animals, setAnimals] = React.useState<animals[]>([]);
 
-React.useEffect(() => {
-  fetchAnimals();
-}, []);
+  React.useEffect(() => {
+    fetchAnimals();
+  }, []);
 
-const fetchAnimals = async () => {
-  try {
-    let res = await fetch("/api/streams/animals/");
-    let animals: animals[] = await res.json();
-    // organizations.reverse();
-    setAnimals(animals);
-  } catch (err) {
-    console.log(err);
-  }
-};
+  const fetchAnimals = async () => {
+    try {
+      let res = await fetch("/api/streams/animals/");
+      let animals: animals[] = await res.json();
+      // organizations.reverse();
+      setAnimals(animals);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
 
     <React.Fragment>
-    <div className="animal-container">
-   <img src="https://i.imgur.com/joRpSs0.png" className="map" />  
-      {animals.map((animals: animals) => (
-        <div key={animals.id} >
-          <Link to={`/streams/animals/${animals.id}`}>
-          
-            
-            <img
-            
-              src={animals.animalMapImage}
-              alt={animals.animalName}
-              className={animals.animalClassName}
-              />
-         
-              </Link>
-        </div>
-        
-      ))}
+      <div className="animal-container">
+        <img src="https://i.imgur.com/joRpSs0.png" className="map" />
+        {animals.map((animals: animals) => (
+          <div key={animals.id} >
+            <Link to={`/streams/animals/${animals.id}`}>
+              <img src={animals.animalMapImage} alt={animals.animalName} className={animals.animalClassName} />
+            </Link>
+          </div>
+        ))}
       </div>
     </React.Fragment>
+    
     // {
     /* <img src="https://i.imgur.com/joRpSs0.png" className="map" />
                 <a href="https://www.google.com/" id="bottle" target="_blank">
@@ -106,6 +98,6 @@ const fetchAnimals = async () => {
   );
 };
 
-interface IAnimalsProps{} 
+interface IAnimalsProps { }
 
 export default Animals;

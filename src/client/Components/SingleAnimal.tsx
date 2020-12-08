@@ -29,11 +29,13 @@ const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
                     <div className="card-body">
                     {/* <h4 className="card-title">{animal.animal}</h4> */}
                     <h5 className="card-title">{animal.animalName}</h5>
-                    <img src={animal.animalImageUrl} alt={animal.animalName}/>
-                    {/* <iframe width="696" height="346" src={animal.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
+                    {/* <img src={animal.animalImageUrl} alt={animal.animalName}/> */}
+                    <iframe width="696" height="346" src={animal.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <h5 className="card-title my-3">Species: {animal.description}</h5>
                     <h5 className="card-title">{animal.animalFunfact}</h5>
-                        <Link to={`/streams/animals/${animal.id}`}>
-                            <button className="btn btn-sm btn-outline-dark float-right">Live Stream</button>
+                    {/* <button className="btn btn-sm btn-outline-dark float-right mx-1" onClick={() => (animal.supportUrl)}>Save</button> */}
+                        <Link to={`${animal.supportUrl}`}>
+                            <button className="btn btn-sm btn-outline-dark float-right">Donate Now</button>
                         </Link>
                     </div>
                 </div>
