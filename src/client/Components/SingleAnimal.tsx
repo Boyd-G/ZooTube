@@ -1,29 +1,35 @@
-import React from "react";
-import { Link, RouteComponentProps } from "react-router-dom";
-import { animals } from "../AnimalTypes";
+import * as React from "react";
+import { useState, useEffect } from "react";
+import { Link, RouteComponentProps, useParams } from "react-router-dom";
+import { IAnimal } from "../AnimalTypes";
 
 const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
-  const [animal, setSingleAnimal] = React.useState<animals[]>([]);
+  let { id } = useParams()
 
-  React.useEffect(() => {
-    fetchSingleAnimal();
-  }, []);
+  const [animal, setSingleAnimal] = useState<IAnimal>(Object);
 
   const fetchSingleAnimal = async () => {
     try {
-      let res = await fetch(`/api/streams/animals/${props.match.params.id}`);
-      let Animal: animals[] = await res.json();
+      let res = await fetch(`/api/streams/animals/${id}`);
+      let data = await res.json();
       // Animal.reverse();
-      setSingleAnimal(Animal);
+
+      setSingleAnimal(data[0]);
     } catch (err) {
       console.log(err);
     }
   };
+  // if (animal.embed=="yes")
 
-  return (
-    <div className="container w-75">
-      {animal.map((animal: animals, index) => (
-        <div key={index} className="card shadow-lg m-2 ">
+  useEffect(() => {
+    fetchSingleAnimal();
+  }, []);
+
+  if(animal.embed === "yes"){ 
+    return (
+    <>
+      <div className="container w-75">
+        <div className="card shadow-lg m-2 ">
           <div className="card-body justify-content-center ">
             <h1 className="card-title m-3">{animal.animalName}</h1>
             <h5 className="card-title m-3">{animal.description}</h5>
@@ -36,7 +42,7 @@ const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
               ></iframe>
             </div>
             <h4 className="card-title">FUNFACT: {animal.animalFunFact}</h4>
-           
+
             <a href={animal.supportUrl} target="_blank">
               <button className="btn btn-sm btn-outline-dark m-2">
                 Donate!
@@ -49,9 +55,41 @@ const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
             </a>
           </div>
         </div>
-      ))}
+      </div>
+    </>
+  )
+} else {
+  return (
+    <>
+    <div className="container w-75">
+      <div className="card shadow-lg m-2 ">
+        <div className="card-body justify-content-center ">
+          <h1 className="card-title m-3">{animal.animalName}</h1>
+          <h5 className="card-title m-3">{animal.description}</h5>
+          <div className="d-flex justify-content-center align-items-center">
+          <img
+                src={animal.animalImageUrl}
+                alt={animal.animalName}
+              />
+          </div>
+          <h4 className="card-title">FUNFACT: {animal.animalFunFact}</h4>
+
+          <a href={animal.supportUrl} target="_blank">
+            <button className="btn btn-sm btn-outline-dark m-2">
+              Donate!
+            </button>
+          </a>
+          <a href={animal.homeUrl} target="_blank">
+            <button className="btn btn-sm btn-outline-dark m-2 float-right">
+              More info!
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
-  );
+  </>
+  )
+}
 };
 
 interface ISingleAnimalProps extends RouteComponentProps<{ id: string }> {}

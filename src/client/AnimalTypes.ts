@@ -1,4 +1,4 @@
-export interface animals {
+export interface IAnimal {
     id?: string,
     animalName: string,
     animalImageUrl: string,
@@ -12,5 +12,6 @@ export interface animals {
     organizationFunfact: string, 
     camUrl: any,
     homeUrl: any,
-    supportUrl: any
+    supportUrl: any,
+    embed: string
 }
