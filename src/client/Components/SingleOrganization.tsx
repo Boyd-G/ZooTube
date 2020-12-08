@@ -31,13 +31,8 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
                     <h5 className="card-title text-light bg-secondary">{organization.animalName}</h5>
                     <img src={organization.animalImageUrl} alt={organization.animalName}/>
                     {/* <iframe width="696" height="346" src={organization.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
-<<<<<<< Updated upstream
                     <h5 className="card-title">{organization.animalFunfact}</h5>
                         <Link to={`/streams/animals/${organization.id}`}>
-=======
-                    <h5 className="card-title text-light bg-secondary">{organization.animalFunfact}</h5>
-                        <Link to={`/streams/organizations/${organization.id}`}>
->>>>>>> Stashed changes
                             <button className="btn btn-sm btn-outline-dark float-right">Live Stream</button>
                         </Link>
                     </div>
