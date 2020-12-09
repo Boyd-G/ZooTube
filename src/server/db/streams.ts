@@ -35,7 +35,9 @@ export const singleOrganization = async (id: number) => Query(`select  Cams.id,
     Animals.description,
     Animals.animalImageUrl,
     organization.id, 
-    animals.id,
+
+    Animals.id,
+
     organization.organization, 
     organizationType.organizationType,  
     organization.organizationFunfact,

@@ -24,6 +24,12 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
     }
   };
 
+  const showModal = () => {
+    let modal = document.getElementById('exampleModalCenter')
+    modal.style
+    console.log(modal)
+  }
+
   return (
     <div className="container w-50">
       {organizations.map((organization: organization, index) => (
@@ -32,21 +38,43 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
             {/* <h4 className="card-title">{organization.organization}</h4> */}
             <h5 className="card-title">{organization.animalName}</h5>
             <div className="d-flex align-items-center ">
-              <img
-                src={organization.animalImageUrl}
-                alt={organization.animalName}
-              />
+              <img src={organization.animalImageUrl} alt={organization.animalName} />
               {/* <iframe width="696" height="346" src={organization.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
             </div>
-              <h5 className="card-title">
+
+            <button type="button" className="btn btn-sm btn-primary my-3" id='modalButton' data-toggle="modal" data-target="#exampleModalCenter">
+              Animal Fun Fact
+            </button>
+
+            <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div className="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="exampleModalLongTitle">Animal Fun Fact</h5>
+                    {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">{organization.animalFunfact}</span>
+                    </button> */}
+                  </div>
+                  <div className="modal-body">
+                    <span aria-hidden="true">{organization.animalFunfact}</span>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <h5 className="card-title my-3">
                 {organization.animalFunfact}
-              </h5>
-              <Link to={`/streams/animals/${organization.id}`}>
-                <button className="btn btn-sm btn-outline-dark float-right">
-                  Live Stream
-                </button>
-              </Link>
-          </div>{" "}
+
+              </h5> */}
+              
+            <Link to={`/streams/animals/${organization.id}`}>
+              <button className="btn btn-sm btn-danger float-right m-3">Live Stream</button>
+            </Link>
+          </div>
+
         </div>
       ))}
     </div>
@@ -54,6 +82,6 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
 };
 
 interface ISingleOrganizationProps
-  extends RouteComponentProps<{ id: string }> {}
+  extends RouteComponentProps<{ id: string }> { }
 
 export default singleOrganizations;
