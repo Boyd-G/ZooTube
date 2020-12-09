@@ -51,13 +51,13 @@ function Home() {
             <div className="card bg-secondary third-container">
                 <div className="card-body row mx-1">
                     <p className="text-light">Connect with us!</p>
-                    <a className="navbar-brand" href="https://www.tiktok.com/en/" target="_blank">
+                    <a className="navbar-brand" href="https://twitter.com/ZooATL" target="_blank">
                         <img src="https://imgur.com/dlXCiM7.png" className="img-fluid sm-logo" />
                     </a>
-                    <a className="navbar-brand" href="https://www.facebook.com/" target="_blank">
+                    <a className="navbar-brand" href="https://www.facebook.com/ZooATL" target="_blank">
                         <img src="https://imgur.com/8ZzQbQl.png" className="img-fluid sm-logo" />
                     </a>
-                    <a className="navbar-brand" href="https://www.instagram.com/" target="_blank">
+                    <a className="navbar-brand" href="https://www.instagram.com/zooatl/" target="_blank">
                         <img src="https://imgur.com/fjPwu61.png" className="img-fluid sm-logo" />
                     </a>
 

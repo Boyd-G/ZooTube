@@ -4,6 +4,12 @@ $theme-colors: (
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
+#grad3 {
+    height: 100px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(180deg, red, yellow);
+  }
+
 .logo-image{
     width: 150px;
     height: 45px;
