@@ -1,5 +1,5 @@
 export interface organization {
-    id?: string,
+    id?: number,
     animalName: string,
     animalImageUrl: string,
     organization: string,
@@ -11,4 +11,5 @@ export interface organization {
     camUrl: any,
     homeUrl: any,
     supportUrl: any
+    animal: string
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link, RouteComponentProps } from "react-router-dom";
 import "../scss/app.scss";
-import { animals } from "../AnimalTypes";
+import { IAnimal } from "../AnimalTypes";
 // import penguin from '../assets/animals/1_animal_penguin.jpg';
 
 const Animals: React.FC<IAnimalsProps> = () => {
-  const [animals, setAnimals] = React.useState<animals[]>([]);
+  const [animals, setAnimals] = React.useState<IAnimal[]>([]);
 
   React.useEffect(() => {
     fetchAnimals();
@@ -14,7 +14,7 @@ const Animals: React.FC<IAnimalsProps> = () => {
   const fetchAnimals = async () => {
     try {
       let res = await fetch("/api/streams/animals/");
-      let animals: animals[] = await res.json();
+      let animals: IAnimal[] = await res.json();
       // organizations.reverse();
       setAnimals(animals);
     } catch (err) {
@@ -26,7 +26,7 @@ const Animals: React.FC<IAnimalsProps> = () => {
     <React.Fragment>
       <div className="animal-container">
         <img src="https://i.imgur.com/joRpSs0.png" className="map" />
-        {animals.map((animals: animals) => (
+        {animals.map((animals: IAnimal) => (
           <div key={animals.id} >
             <Link to={`/streams/animals/${animals.id}`}>
               <img src={animals.animalMapImage} alt={animals.animalName} className={animals.animalClassName} />
