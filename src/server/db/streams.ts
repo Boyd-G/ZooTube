@@ -29,13 +29,15 @@ WHERE cams.id = ?`, [id])
 
 export const allOrganizations = async () => Query("select organization.* from organization")
 
-export const singleOrganization = async (id: number) => Query(`select  Cams.id, 
+export const singleOrganization = async (id: number) => Query(`select  Cams.id,    
     Animals.animalName, 
     Animals.animalFunfact,
     Animals.description,
     Animals.animalImageUrl,
     organization.id, 
+
     Animals.id,
+
     organization.organization, 
     organizationType.organizationType,  
     organization.organizationFunfact,
@@ -55,7 +57,7 @@ export const allOrganizationTypes = async () => Query("SELECT * FROM ORGANIZATIO
 
 export const singleOrganizationType = async (id: number) => Query(`select  Cams.id, 
 Animals.animalName, 
-organization.id, 
+animal.id, 
 organization.organization, 
 organizationType.organizationType,  
 organization.organizationFunfact,

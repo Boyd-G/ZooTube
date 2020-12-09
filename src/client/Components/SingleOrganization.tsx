@@ -31,9 +31,9 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
   }
 
   return (
-    <div className="container w-75">
+    <div className="container w-50">
       {organizations.map((organization: organization, index) => (
-        <div key={index} className="card shadow-lg m-2 w-75">
+        <div key={index} className="card shadow-lg m-2">
           <div className="card-body justify-content-center ">
             {/* <h4 className="card-title">{organization.organization}</h4> */}
             <h5 className="card-title">{organization.animalName}</h5>
@@ -67,12 +67,14 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
 
             {/* <h5 className="card-title my-3">
                 {organization.animalFunfact}
+
               </h5> */}
               
             <Link to={`/streams/animals/${organization.id}`}>
               <button className="btn btn-sm btn-danger float-right m-3">Live Stream</button>
             </Link>
           </div>
+
         </div>
       ))}
     </div>

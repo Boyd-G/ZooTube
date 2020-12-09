@@ -22,9 +22,11 @@ const Organizations: React.FC<IOrganizationProps> = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container w-50">
             {organizations.map((organization: organization) => (
+
                 <div key={organization.id} className="card shadow-lg m-2" style={{width:680}}>
+
                     <div className="card-body">
                     <h4 className="card-title">{organization.organization}</h4>
                     <img src={organization.orgImageUrl} alt={organization.animalName}/>
