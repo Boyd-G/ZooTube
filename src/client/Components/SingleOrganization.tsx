@@ -31,12 +31,12 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
   }
 
   return (
-    <div className="container w-50">
+    <div className="container justify-content-center" style={{ width: 945}}>
       {organizations.map((organization: organization, index) => (
-        <div key={index} className="card shadow-lg m-2">
+        <div key={index} className="card shadow-lg bg-secondary m-2 w-75">
           <div className="card-body justify-content-center ">
             {/* <h4 className="card-title">{organization.organization}</h4> */}
-            <h5 className="card-title">{organization.animalName}</h5>
+            <h5 className="card-title text-light">{organization.animalName}</h5>
             <div className="d-flex align-items-center ">
               <img src={organization.animalImageUrl} alt={organization.animalName} />
               {/* <iframe width="696" height="346" src={organization.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
@@ -46,7 +46,7 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
               Animal Fun Fact
             </button>
 
-            <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div className="modal fade" id="exampleModalCenter" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div className="modal-dialog modal-dialog-centered" role="document">
                 <div className="modal-content">
                   <div className="modal-header">
@@ -67,14 +67,12 @@ const singleOrganizations: React.FC<ISingleOrganizationProps> = (props) => {
 
             {/* <h5 className="card-title my-3">
                 {organization.animalFunfact}
-
               </h5> */}
               
             <Link to={`/streams/animals/${organization.id}`}>
               <button className="btn btn-sm btn-danger float-right m-3">Live Stream</button>
             </Link>
           </div>
-
         </div>
       ))}
     </div>

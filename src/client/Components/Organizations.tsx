@@ -25,12 +25,12 @@ const Organizations: React.FC<IOrganizationProps> = () => {
         <div className="container w-50">
             {organizations.map((organization: organization) => (
 
-                <div key={organization.id} className="card shadow-lg m-2" style={{width:680}}>
+                <div key={organization.id} className="card shadow-lg bg-secondary m-2" style={{width:680}}>
 
                     <div className="card-body">
-                    <h4 className="card-title">{organization.organization}</h4>
+                    <h4 className="card-title text-light">{organization.organization}</h4>
                     <img src={organization.orgImageUrl} alt={organization.animalName}/>
-                    <h5 className="card-title my-3">{organization.description}</h5>
+                    <h5 className="card-title text-light my-3">{organization.description}</h5>
 
                     {/* <h5 className="card-title">{organization.organizationFunfact}</h5> */}
                         <Link to={`/streams/organizations/${organization.id}`}>

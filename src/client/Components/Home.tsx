@@ -22,12 +22,12 @@ function Home() {
             <h3 className="ft">Featured Stream</h3>
             <div className="card shadow-lg main-container bg-secondary" style={{ width: 750 }}>
                 <div className="card-body">
-                    <h5 className="card-title text-light">Atlanta Zoo   - Panda Exhibit</h5>
+                    <h5 className="card-title text-light">Zoo Atlanta   - Panda Exhibit</h5>
                     {/* <p className="card-text text-light">Panda</p> */}
                     <iframe width="696" height="346" src="https://www.youtube.com/embed/1bTw9xzhD1A" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     <div className="allBtns">
                         <a href="https://zooatlanta.org" target="_blank"><button className="btn btn-sm btn-success m-2">More info!</button></a>
-                        <a href="https://give.zooatlanta.org/donate" target="_blank"><button className="btn btn-sm btn-success m-2">Donate!</button></a>
+                        <a href="https://give.zooatlanta.org/donate" target="_blank"><button className="btn btn-sm btn-success m-2 float-right">Donate!</button></a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ function Home() {
 
             <div className="card bg-secondary third-container">
                 <div className="card-body row mx-1">
-                    <p className="text-light">Connect with us!</p>
+                    <p className="text-light">Follow Zoo Atl</p>
                     <a className="navbar-brand" href="https://twitter.com/ZooATL" target="_blank">
                         <img src="https://imgur.com/dlXCiM7.png" className="img-fluid sm-logo" />
                     </a>
