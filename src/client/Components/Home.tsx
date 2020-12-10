@@ -41,7 +41,7 @@ function Home() {
                         </div>
                     </a>
                     {/* <h5 className="card-title">Our Mission Statement</h5> */}
-                    <p className="card-text text-light">Zoos and rescues around the country and around the world provide an important service by conducting research, rescuing and rehabilitating animals, overseeing animal population management,
+                    <p className="card-text text-light mt-2">Zoos and rescues around the country and around the world provide an important service by conducting research, rescuing and rehabilitating animals, overseeing animal population management,
                     and providing education and entertainment to millions of people each year.  During the current global pandemic, zoos have seen a sharp decline in attendance.
                     Due to this there are less available resources to help home, rehabilitate, and care for these animals.
                     Our goal is to provide a way for people to engage, and donate, to these animals and organizations that we all love, from the safety of their own homes.</p>

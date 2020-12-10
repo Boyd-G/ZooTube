@@ -23,6 +23,7 @@ const Organizations: React.FC<IOrganizationProps> = () => {
 
     return (
         <div className="container w-50">
+            <img className="orgbar" src="https://i.imgur.com/qeh7fAy.png"></img>
             {organizations.map((organization: organization) => (
 
                 <div key={organization.id} className="card shadow-lg bg-secondary m-2" style={{width:680}}>
