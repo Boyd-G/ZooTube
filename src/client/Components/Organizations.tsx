@@ -26,14 +26,14 @@ const Organizations: React.FC<IOrganizationProps> = () => {
             <img className="orgbar" src="https://i.imgur.com/qeh7fAy.png"></img>
             {organizations.map((organization: organization) => (
 
-                <div key={organization.id} className="card shadow-lg bg-secondary m-2" style={{width:680}}>
+                <div key={organization.id} className="card shadow-lg bg-secondary m-2" style={{ width: 680 }}>
 
                     <div className="card-body">
-                    <h4 className="card-title text-light">{organization.organization}</h4>
-                    <img src={organization.orgImageUrl} alt={organization.animalName}/>
-                    <h5 className="card-title text-light my-3">{organization.description}</h5>
+                        <h4 className="card-title text-light">{organization.organization}</h4>
+                        <img src={organization.orgImageUrl} alt={organization.animalName} />
+                        <h5 className="card-title text-light my-3">{organization.description}</h5>
 
-                    {/* <h5 className="card-title">{organization.organizationFunfact}</h5> */}
+                        {/* <h5 className="card-title">{organization.organizationFunfact}</h5> */}
                         <Link to={`/streams/organizations/${organization.id}`}>
                             <button className="btn btn-sm btn-success">See Animals</button>
                         </Link>

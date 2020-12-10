@@ -35,7 +35,7 @@ const Animals: React.FC<IAnimalsProps> = () => {
         ))}
       </div>
     </React.Fragment>
-    
+
     // {
     /* <img src="https://i.imgur.com/joRpSs0.png" className="map" />
                 <a href="https://www.google.com/" id="bottle" target="_blank">

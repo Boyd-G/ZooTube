@@ -19,7 +19,8 @@ function Home() {
     }
     return (
         <div className="container">
-            <h3 className="ft">Featured Stream</h3>
+            <img className="ftbar" src="https://i.imgur.com/k6wPyUH.png"></img>
+            <h3 className="ft"></h3>
             <div className="card shadow-lg main-container bg-secondary" style={{ width: 750 }}>
                 <div className="card-body">
                     <h5 className="card-title text-light">Zoo Atlanta   - Panda Exhibit</h5>
@@ -52,7 +53,7 @@ function Home() {
                 <div className="card-body row mx-1">
                     <p className="text-light">Follow Zoo Atl</p>
                     <a className="navbar-brand" href="https://twitter.com/ZooATL" target="_blank">
-                        <img src="https://imgur.com/dlXCiM7.png" className="img-fluid sm-logo" />
+                        <img src="https://i.imgur.com/R2Ch7Ni.png" className="img-fluid sm-logo" />
                     </a>
                     <a className="navbar-brand" href="https://www.facebook.com/ZooATL" target="_blank">
                         <img src="https://imgur.com/8ZzQbQl.png" className="img-fluid sm-logo" />

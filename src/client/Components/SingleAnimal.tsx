@@ -25,63 +25,63 @@ const singleAnimal: React.FC<ISingleAnimalProps> = (props) => {
     fetchSingleAnimal();
   }, []);
 
-  if(animal.embed === "yes"){ 
+  if (animal.embed === "yes") {
     return (
-    <>
-      <div className="container" style={{ width: 700}}>
-        <div className="card shadow-lg mt-5 bg-secondary">
-          <div className="card-body justify-content-center w-25ç">
-            <h1 className="card-title text-light">{animal.animalName}</h1>
-            <h5 className="card-title text-light">Species: {animal.description}</h5>
-            <div className="d-flex justify-content-center align-items-center">
+      <>
+        <div className="container" style={{ width: 700 }}>
+          <div className="card shadow-lg mt-5 bg-secondary">
+            <div className="card-body justify-content-center w-25ç">
+              <h1 className="card-title text-light">{animal.animalName}</h1>
+              <h5 className="card-title text-light">Species: {animal.description}</h5>
+              <div className="d-flex justify-content-center align-items-center">
 
-              <iframe width="696" height="346" src={animal.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                <iframe width="696" height="346" src={animal.camUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+              </div>
+              {/* <h4 className="card-title">FUNFACT: {animal.animalFunFact}</h4> */}
+
+              <a href={animal.supportUrl} target="_blank">
+                <button className="btn btn-sm btn-success mt-2">Donate!</button>
+              </a>
+              <a href={animal.homeUrl} target="_blank">
+                <button className="btn btn-sm btn-success mt-2 float-right">More info!</button>
+              </a>
             </div>
-            {/* <h4 className="card-title">FUNFACT: {animal.animalFunFact}</h4> */}
-
-            <a href={animal.supportUrl} target="_blank">
-              <button className="btn btn-sm btn-success mt-2">Donate!</button>
-            </a>
-            <a href={animal.homeUrl} target="_blank">
-              <button className="btn btn-sm btn-success mt-2 float-right">More info!</button>
-            </a>
           </div>
         </div>
-      </div>
-    </>
-  )
-} else {
-  return (
-    <>
-    <div className="container" style={{width: 700}}>
-      <div className="card shadow-lg bg-secondary mt-2">
-        <div className="card-body justify-content-center">
-          <h1 className="card-title text-light">{animal.animalName}</h1>
-          <h5 className="card-title text-light">Species: {animal.description}</h5>
-          <div className="d-flex justify-content-center align-items-center w-100">
-          <img
-                src={animal.animalImageUrl}
-                alt={animal.animalName}
-              />
-          </div>
-          {/* <h4 className="card-title">FUNFACT: {animal.animalFunFact}</h4> */}
+      </>
+    )
+  } else {
+    return (
+      <>
+        <div className="container" style={{ width: 700 }}>
+          <div className="card shadow-lg bg-secondary mt-2">
+            <div className="card-body justify-content-center">
+              <h1 className="card-title text-light">{animal.animalName}</h1>
+              <h5 className="card-title text-light">Species: {animal.description}</h5>
+              <div className="d-flex justify-content-center align-items-center w-100">
+                <img
+                  src={animal.animalImageUrl}
+                  alt={animal.animalName}
+                />
+              </div>
+              {/* <h4 className="card-title">FUNFACT: {animal.animalFunFact}</h4> */}
 
-          <a href={animal.supportUrl} target="_blank">
-            <button className="btn btn-sm btn-success m-2">
-              Donate!
+              <a href={animal.supportUrl} target="_blank">
+                <button className="btn btn-sm btn-success m-2">
+                  Donate!
             </button>
-          </a>
-          <a href={animal.homeUrl} target="_blank">
-            <button className="btn btn-sm btn-success m-2 float-right">
-              More info!
+              </a>
+              <a href={animal.homeUrl} target="_blank">
+                <button className="btn btn-sm btn-success m-2 float-right">
+                  More info!
             </button>
-          </a>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </>
-  )
-}
+      </>
+    )
+  }
 };
 
 interface ISingleAnimalProps extends RouteComponentProps<{ id: string }> { }
